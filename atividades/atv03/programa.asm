@@ -2,7 +2,7 @@
 .globl main
 
 main:
-    
+
     lw $s0, x
     lw $s1, y
     
@@ -35,7 +35,7 @@ funcao:
     jr $ra
 
 .data
-x: .word 65
-y: .word 10
+x: .word 5
+y: .word 0
 msg1: .asciiz "y="
 lf:     .asciiz "\n"

@@ -10,7 +10,6 @@ int main(void)
     y = 0;
 
     printf("y=%d\n", funcao(x, y));
-    printf("x=%d\n", x);
 
     return 0;
 }
