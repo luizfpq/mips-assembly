@@ -1,0 +1,12 @@
+Implementar no logsim um somador de 12 bits
+Vídeo de no máximo 5 minutos;
+Link do vídeo no youtube (link-do-video.txt);
+Enviar arquivo do logsim no ava (somador.circ);
+Durante a apresentação, mostrar pelo menos 2 exemplos (duas contas);
+
+Critérios de avaliação: 
+
+Desenvolvimento/Vídeo: 0,5
+Entrevista: 0,5
+
+Entrega: 25/02 até 15h00
