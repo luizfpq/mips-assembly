@@ -12,7 +12,7 @@ main:
     Loop:
         # (a < b) = (b > a)
         slt $t4, $t0, $t1
-        # se a < c → $t4 = 1
+        # se a < b → $t4 = 1
         # se $t4 = 1 entra no loop
         # beq → t4 = 0, então Exit
         beq $t4, $zero, Exit
@@ -28,11 +28,12 @@ main:
                 # c = a + 1;
                 addi $t2, $t0, 1
             Else:
+                # c = b + 1
                 addi  $t2, $t1, 1 
-            addi $t0, $t0, 1
-        
+            
+        addi $t0, $t0, 1
     j Loop
-
+    
     Exit:
 
 
@@ -47,32 +48,24 @@ main:
         move $a0, $t0
         syscall
 
-        li	$v0,4		# Code for syscall: print_string
-        la	$a0, msg	# Pointer to string (load the address of msg)
+        li	$v0,4		# imprime string
+        la	$a0, msg	# carrega mensagem
         syscall
 
         li $v0, 1
         move $a0, $t1
         syscall
 
-        li	$v0,4		# Code for syscall: print_string
-        la	$a0, msg	# Pointer to string (load the address of msg)
+        li	$v0,4		# imprime string
+        la	$a0, msg	# carrega mensagem
         syscall
 
         li $v0, 1
         move $a0, $t2
         syscall
-        
-        li	$v0,4		# Code for syscall: print_string
-        la	$a0, msg	# Pointer to string (load the address of msg)
-        syscall
 
-        li $v0, 1
-        move $a0, $t3
-        syscall
-
-        li	$v0,4		# Code for syscall: print_string
-        la	$a0, newline	# Pointer to string (load the address of msg)
+        li	$v0,4		# imprime string
+        la	$a0, newline	# carrega mensagem
         syscall
      
         # Return from function

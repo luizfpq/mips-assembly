@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.4.1" version="1.0">
-  This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
+<project source="2.7.1" version="1.0">
+  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
 
-  <lib desc="#Wiring" name="0">
-    <tool name="Pin">
-      <a name="appearance" val="NewPins"/>
-    </tool>
-    <tool name="Probe">
-      <a name="appearance" val="NewPins"/>
-    </tool>
-  </lib>
-  <lib desc="#Gates" name="1">
-    <tool name="PLA">
-      <a name="table" val=""/>
-    </tool>
-  </lib>
+  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
     <tool name="Multiplexer">
       <a name="enable" val="false"/>
@@ -25,92 +14,19 @@
   </lib>
   <lib desc="#Arithmetic" name="3"/>
   <lib desc="#Memory" name="4">
-    <tool name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-    </tool>
-    <tool name="T Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-    </tool>
-    <tool name="J-K Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-    </tool>
-    <tool name="S-R Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-    </tool>
-    <tool name="Register">
-      <a name="appearance" val="logisim_evolution"/>
-    </tool>
-    <tool name="Counter">
-      <a name="appearance" val="logisim_evolution"/>
-    </tool>
-    <tool name="Shift Register">
-      <a name="appearance" val="logisim_evolution"/>
-    </tool>
-    <tool name="Random">
-      <a name="appearance" val="logisim_evolution"/>
-    </tool>
-    <tool name="RAM">
-      <a name="appearance" val="logisim_evolution"/>
-    </tool>
     <tool name="ROM">
-      <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 8
 0
 </a>
     </tool>
   </lib>
   <lib desc="#I/O" name="5"/>
-  <lib desc="#TTL" name="6"/>
-  <lib desc="#TCL" name="7">
-    <tool name="TclGeneric">
-      <a name="content">library ieee;
-use ieee.std_logic_1164.all;
-
-entity TCL_Generic is
-  port(
-    --Insert input ports below
-    horloge_i  : in  std_logic;                    -- input bit example
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
-
-	  --Insert output ports below
-    max_o      : out std_logic;                    -- output bit example
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
-  );
-end TCL_Generic;
-</a>
-    </tool>
-  </lib>
-  <lib desc="#Base" name="8">
+  <lib desc="#Base" name="6">
     <tool name="Text Tool">
+      <a name="text" val=""/>
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="center"/>
-      <a name="text" val=""/>
       <a name="valign" val="base"/>
-    </tool>
-  </lib>
-  <lib desc="#BFH-Praktika" name="9"/>
-  <lib desc="#Input/Output-Extra" name="10"/>
-  <lib desc="#Soc" name="11">
-    <tool name="Rv32im">
-      <a name="SocBusSelection" val=""/>
-    </tool>
-    <tool name="Nios2">
-      <a name="SocBusSelection" val=""/>
-    </tool>
-    <tool name="SocBus">
-      <a name="SocBusIdentifier" val="0x00000177D6AF7E3D92f59b1"/>
-    </tool>
-    <tool name="Socmem">
-      <a name="SocBusSelection" val=""/>
-    </tool>
-    <tool name="SocPio">
-      <a name="SocBusSelection" val=""/>
-    </tool>
-    <tool name="SocVga">
-      <a name="SocBusSelection" val=""/>
-    </tool>
-    <tool name="SocJtagUart">
-      <a name="SocBusSelection" val=""/>
     </tool>
   </lib>
   <main name="SomadorQuirino"/>
@@ -120,26 +36,23 @@ end TCL_Generic;
     <a name="simrand" val="0"/>
   </options>
   <mappings>
-    <tool lib="8" map="Button2" name="Menu Tool"/>
-    <tool lib="8" map="Button3" name="Menu Tool"/>
-    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
   </mappings>
   <toolbar>
-    <tool lib="8" name="Poke Tool"/>
-    <tool lib="8" name="Edit Tool"/>
-    <tool lib="8" name="Wiring Tool"/>
-    <tool lib="8" name="Text Tool">
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Wiring Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="center"/>
-      <a name="text" val=""/>
       <a name="valign" val="base"/>
     </tool>
     <sep/>
+    <tool lib="0" name="Pin"/>
     <tool lib="0" name="Pin">
-      <a name="appearance" val="NewPins"/>
-    </tool>
-    <tool lib="0" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
     </tool>
@@ -151,202 +64,190 @@ end TCL_Generic;
     <tool lib="1" name="NAND Gate"/>
     <tool lib="1" name="NOR Gate"/>
     <sep/>
-    <tool lib="4" name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-    </tool>
-    <tool lib="4" name="Register">
-      <a name="appearance" val="logisim_evolution"/>
-    </tool>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
   </toolbar>
   <circuit name="SomadorQuirino">
-    <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="SomadorQuirino"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
-    <comp lib="0" loc="(410,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(430,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(440,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(450,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(470,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(490,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(510,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <wire from="(430,510)" to="(440,510)"/>
+    <wire from="(880,480)" to="(880,490)"/>
+    <wire from="(440,480)" to="(440,510)"/>
     <comp lib="0" loc="(530,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(530,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(550,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(550,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(570,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(570,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(590,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(590,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(610,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
+    <comp lib="0" loc="(590,260)" name="Pin">
       <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(610,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(630,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
+    <comp lib="0" loc="(530,480)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(630,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(650,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(670,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(670,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(690,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(690,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(710,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(710,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(730,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(730,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(750,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(750,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(770,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(790,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(810,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(830,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
+    <comp lib="0" loc="(730,260)" name="Pin">
       <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(850,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(870,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(880,480)" name="Ground"/>
-    <comp lib="0" loc="(890,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
+    <comp lib="0" loc="(750,480)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
     </comp>
     <comp loc="(750,480)" name="Somador12Bits">
       <a name="facing" val="south"/>
     </comp>
+    <comp lib="0" loc="(890,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(430,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(410,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(670,480)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(710,480)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(690,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(730,480)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(570,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(630,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(670,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(430,510)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(830,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(690,480)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(710,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(450,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(750,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(570,480)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(610,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(470,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(770,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(650,480)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(510,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(880,490)" name="Ground"/>
+    <comp lib="0" loc="(550,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(790,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(850,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(490,260)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+    </comp>
   </circuit>
   <circuit name="Somador1Bit">
-    <a name="appearance" val="custom"/>
     <a name="circuit" val="Somador1Bit"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
     <appear>
-      <circ-anchor facing="east" height="6" width="6" x="267" y="67"/>
-      <circ-port height="10" pin="420,240" width="10" x="265" y="95"/>
       <circ-port height="10" pin="420,50" width="10" x="265" y="65"/>
-      <circ-port height="8" pin="120,130" width="8" x="46" y="76"/>
       <circ-port height="8" pin="120,190" width="8" x="266" y="36"/>
-      <circ-port height="8" pin="120,90" width="8" x="46" y="56"/>
       <rect fill="none" height="102" stroke="#000000" stroke-width="2" width="199" x="60" y="28"/>
       <rect height="20" stroke="none" width="200" x="60" y="110"/>
       <rect height="3" stroke="none" width="10" x="260" y="69"/>
@@ -354,108 +255,107 @@ end TCL_Generic;
       <rect height="3" stroke="none" width="10" x="50" y="59"/>
       <rect height="3" stroke="none" width="10" x="50" y="79"/>
       <rect height="4" stroke="none" width="12" x="258" y="38"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="104">COUT</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="74">C0</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="235" y="44">CIN</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">A0</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">B0</text>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="124">Soamdor1Bit</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="104">COUT</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="74">C0</text>
+      <circ-port height="8" pin="120,90" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="120,130" width="8" x="46" y="76"/>
+      <circ-port height="10" pin="420,240" width="10" x="265" y="95"/>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="235" y="44">CIN</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">A0</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">B0</text>
+      <text fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="124">Soamdor1Bit</text>
+      <circ-anchor facing="east" height="6" width="6" x="267" y="67"/>
     </appear>
-    <comp lib="0" loc="(120,130)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B0"/>
-    </comp>
-    <comp lib="0" loc="(120,190)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="CIN"/>
+    <wire from="(120,210)" to="(120,290)"/>
+    <wire from="(340,200)" to="(340,220)"/>
+    <wire from="(340,260)" to="(340,280)"/>
+    <wire from="(120,190)" to="(120,210)"/>
+    <wire from="(190,240)" to="(360,240)"/>
+    <wire from="(140,250)" to="(140,270)"/>
+    <wire from="(420,50)" to="(420,130)"/>
+    <wire from="(120,210)" to="(160,210)"/>
+    <wire from="(120,290)" to="(160,290)"/>
+    <wire from="(140,130)" to="(170,130)"/>
+    <wire from="(230,110)" to="(260,110)"/>
+    <wire from="(120,90)" to="(150,90)"/>
+    <wire from="(150,90)" to="(150,190)"/>
+    <wire from="(190,200)" to="(340,200)"/>
+    <wire from="(190,280)" to="(340,280)"/>
+    <wire from="(340,220)" to="(360,220)"/>
+    <wire from="(340,260)" to="(360,260)"/>
+    <wire from="(130,150)" to="(130,190)"/>
+    <wire from="(150,190)" to="(150,230)"/>
+    <wire from="(120,130)" to="(140,130)"/>
+    <wire from="(140,250)" to="(160,250)"/>
+    <wire from="(140,270)" to="(160,270)"/>
+    <wire from="(150,90)" to="(170,90)"/>
+    <wire from="(410,240)" to="(420,240)"/>
+    <wire from="(150,190)" to="(160,190)"/>
+    <wire from="(150,230)" to="(160,230)"/>
+    <wire from="(340,130)" to="(420,130)"/>
+    <wire from="(120,190)" to="(130,190)"/>
+    <wire from="(140,130)" to="(140,250)"/>
+    <wire from="(130,150)" to="(260,150)"/>
+    <comp lib="0" loc="(420,50)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C0"/>
     </comp>
     <comp lib="0" loc="(120,90)" name="Pin">
-      <a name="appearance" val="NewPins"/>
+      <a name="tristate" val="false"/>
       <a name="label" val="A0"/>
-    </comp>
-    <comp lib="0" loc="(420,240)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="COUT"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(420,50)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C0"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="1" loc="(190,200)" name="AND Gate">
-      <a name="size" val="30"/>
-    </comp>
-    <comp lib="1" loc="(190,240)" name="AND Gate">
-      <a name="size" val="30"/>
-    </comp>
-    <comp lib="1" loc="(190,280)" name="AND Gate">
-      <a name="size" val="30"/>
-    </comp>
-    <comp lib="1" loc="(230,110)" name="XOR Gate"/>
-    <comp lib="1" loc="(340,130)" name="XOR Gate">
-      <a name="size" val="70"/>
     </comp>
     <comp lib="1" loc="(410,240)" name="OR Gate">
       <a name="inputs" val="3"/>
     </comp>
-    <wire from="(120,130)" to="(140,130)"/>
-    <wire from="(120,190)" to="(120,210)"/>
-    <wire from="(120,190)" to="(130,190)"/>
-    <wire from="(120,210)" to="(120,290)"/>
-    <wire from="(120,210)" to="(160,210)"/>
-    <wire from="(120,290)" to="(160,290)"/>
-    <wire from="(120,90)" to="(150,90)"/>
-    <wire from="(130,150)" to="(130,190)"/>
-    <wire from="(130,150)" to="(260,150)"/>
-    <wire from="(140,130)" to="(140,250)"/>
-    <wire from="(140,130)" to="(170,130)"/>
-    <wire from="(140,250)" to="(140,270)"/>
-    <wire from="(140,250)" to="(160,250)"/>
-    <wire from="(140,270)" to="(160,270)"/>
-    <wire from="(150,190)" to="(150,230)"/>
-    <wire from="(150,190)" to="(160,190)"/>
-    <wire from="(150,230)" to="(160,230)"/>
-    <wire from="(150,90)" to="(150,190)"/>
-    <wire from="(150,90)" to="(170,90)"/>
-    <wire from="(190,200)" to="(340,200)"/>
-    <wire from="(190,240)" to="(360,240)"/>
-    <wire from="(190,280)" to="(340,280)"/>
-    <wire from="(230,110)" to="(260,110)"/>
-    <wire from="(340,130)" to="(420,130)"/>
-    <wire from="(340,200)" to="(340,220)"/>
-    <wire from="(340,220)" to="(360,220)"/>
-    <wire from="(340,260)" to="(340,280)"/>
-    <wire from="(340,260)" to="(360,260)"/>
-    <wire from="(410,240)" to="(420,240)"/>
-    <wire from="(420,50)" to="(420,130)"/>
+    <comp lib="1" loc="(230,110)" name="XOR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(340,130)" name="XOR Gate">
+      <a name="size" val="70"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(190,280)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(190,240)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(190,200)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(120,130)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B0"/>
+    </comp>
+    <comp lib="0" loc="(420,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="COUT"/>
+    </comp>
+    <comp lib="0" loc="(120,190)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="CIN"/>
+    </comp>
   </circuit>
   <circuit name="Somador4Bits">
-    <a name="appearance" val="custom"/>
     <a name="circuit" val="Somador4Bits"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
     <appear>
-      <circ-anchor facing="east" height="6" width="6" x="267" y="107"/>
       <circ-port height="10" pin="470,170" width="10" x="265" y="105"/>
-      <circ-port height="10" pin="470,280" width="10" x="265" y="125"/>
       <circ-port height="10" pin="470,390" width="10" x="265" y="145"/>
-      <circ-port height="10" pin="470,500" width="10" x="265" y="165"/>
       <circ-port height="10" pin="470,580" width="10" x="265" y="215"/>
-      <circ-port height="8" pin="250,160" width="8" x="46" y="56"/>
       <circ-port height="8" pin="250,180" width="8" x="46" y="156"/>
-      <circ-port height="8" pin="250,270" width="8" x="46" y="76"/>
       <circ-port height="8" pin="250,290" width="8" x="46" y="176"/>
-      <circ-port height="8" pin="250,380" width="8" x="46" y="96"/>
       <circ-port height="8" pin="250,400" width="8" x="46" y="196"/>
-      <circ-port height="8" pin="250,490" width="8" x="46" y="116"/>
       <circ-port height="8" pin="250,510" width="8" x="46" y="216"/>
-      <circ-port height="8" pin="470,140" width="8" x="266" y="66"/>
       <rect fill="none" height="200" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
       <rect height="20" stroke="none" width="200" x="60" y="230"/>
       <rect height="3" stroke="none" width="10" x="260" y="109"/>
@@ -472,146 +372,136 @@ end TCL_Generic;
       <rect height="3" stroke="none" width="10" x="50" y="59"/>
       <rect height="3" stroke="none" width="10" x="50" y="79"/>
       <rect height="3" stroke="none" width="10" x="50" y="99"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="114">C0</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="134">C1</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="154">C2</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="174">C3</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="224">COUT</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="104">A2</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="124">A3</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="145">CIN</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="164">B0</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="184">B1</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="204">B2</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="224">B3</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">A0</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">A1</text>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="244">Somador4Bits</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="114">C0</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="134">C1</text>
+      <circ-port height="8" pin="470,140" width="8" x="266" y="66"/>
+      <circ-port height="8" pin="250,490" width="8" x="46" y="116"/>
+      <circ-port height="8" pin="250,380" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="250,270" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="250,160" width="8" x="46" y="56"/>
+      <circ-port height="10" pin="470,500" width="10" x="265" y="165"/>
+      <circ-port height="10" pin="470,280" width="10" x="265" y="125"/>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="154">C2</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="174">C3</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="224">COUT</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="232" y="75">CIN</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="104">A2</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="124">A3</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="164">B0</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="184">B1</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="204">B2</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="224">B3</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">A0</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">A1</text>
+      <text fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="244">Somador4Bits</text>
+      <circ-anchor facing="east" height="6" width="6" x="267" y="107"/>
     </appear>
-    <comp lib="0" loc="(250,160)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A0"/>
-    </comp>
-    <comp lib="0" loc="(250,180)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B0"/>
-    </comp>
-    <comp lib="0" loc="(250,270)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(250,290)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B1"/>
-    </comp>
-    <comp lib="0" loc="(250,380)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A2"/>
-    </comp>
-    <comp lib="0" loc="(250,400)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B2"/>
-    </comp>
-    <comp lib="0" loc="(250,490)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A3"/>
-    </comp>
-    <comp lib="0" loc="(250,510)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B3"/>
-    </comp>
-    <comp lib="0" loc="(470,140)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="CIN"/>
-    </comp>
-    <comp lib="0" loc="(470,170)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C0"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(470,280)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C1"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(470,390)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C2"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(470,500)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C3"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(470,580)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="COUT"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp loc="(470,170)" name="Somador1Bit"/>
-    <comp loc="(470,280)" name="Somador1Bit"/>
-    <comp loc="(470,390)" name="Somador1Bit"/>
-    <comp loc="(470,500)" name="Somador1Bit"/>
     <wire from="(470,200)" to="(470,250)"/>
     <wire from="(470,310)" to="(470,360)"/>
     <wire from="(470,420)" to="(470,470)"/>
     <wire from="(470,530)" to="(470,580)"/>
+    <comp lib="0" loc="(470,580)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="COUT"/>
+    </comp>
+    <comp loc="(470,280)" name="Somador1Bit"/>
+    <comp lib="0" loc="(250,400)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B2"/>
+    </comp>
+    <comp lib="0" loc="(470,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C0"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(250,290)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(470,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(470,390)" name="Somador1Bit"/>
+    <comp lib="0" loc="(250,160)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A0"/>
+    </comp>
+    <comp lib="0" loc="(250,270)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp loc="(470,500)" name="Somador1Bit"/>
+    <comp lib="0" loc="(250,510)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B3"/>
+    </comp>
+    <comp lib="0" loc="(470,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="CIN"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(250,180)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B0"/>
+    </comp>
+    <comp lib="0" loc="(250,380)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A2"/>
+    </comp>
+    <comp lib="0" loc="(470,390)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C2"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(470,500)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C3"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(470,170)" name="Somador1Bit"/>
+    <comp lib="0" loc="(250,490)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A3"/>
+    </comp>
   </circuit>
   <circuit name="Somador12Bits">
-    <a name="appearance" val="custom"/>
     <a name="circuit" val="Somador12Bits"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
+    <a name="clabelup" val="west"/>
     <a name="clabelfont" val="SansSerif bold 16"/>
-    <a name="clabelup" val="east"/>
     <appear>
-      <circ-anchor facing="east" height="6" width="6" x="267" y="197"/>
       <circ-port height="10" pin="650,200" width="10" x="265" y="195"/>
-      <circ-port height="10" pin="650,220" width="10" x="265" y="215"/>
       <circ-port height="10" pin="650,240" width="10" x="265" y="235"/>
-      <circ-port height="10" pin="650,260" width="10" x="265" y="255"/>
       <circ-port height="10" pin="650,400" width="10" x="265" y="275"/>
-      <circ-port height="10" pin="650,420" width="10" x="265" y="295"/>
       <circ-port height="10" pin="650,440" width="10" x="265" y="315"/>
-      <circ-port height="10" pin="650,460" width="10" x="265" y="335"/>
       <circ-port height="10" pin="650,600" width="10" x="265" y="355"/>
-      <circ-port height="10" pin="650,620" width="10" x="265" y="375"/>
       <circ-port height="10" pin="650,640" width="10" x="265" y="395"/>
-      <circ-port height="10" pin="650,660" width="10" x="265" y="415"/>
       <circ-port height="10" pin="650,710" width="10" x="265" y="505"/>
-      <circ-port height="8" pin="430,150" width="8" x="46" y="56"/>
       <circ-port height="8" pin="430,170" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="430,190" width="8" x="46" y="96"/>
       <circ-port height="8" pin="430,210" width="8" x="46" y="116"/>
-      <circ-port height="8" pin="430,250" width="8" x="46" y="316"/>
       <circ-port height="8" pin="430,270" width="8" x="46" y="336"/>
-      <circ-port height="8" pin="430,290" width="8" x="46" y="356"/>
       <circ-port height="8" pin="430,310" width="8" x="46" y="376"/>
-      <circ-port height="8" pin="430,350" width="8" x="46" y="136"/>
       <circ-port height="8" pin="430,370" width="8" x="46" y="156"/>
-      <circ-port height="8" pin="430,390" width="8" x="46" y="176"/>
       <circ-port height="8" pin="430,410" width="8" x="46" y="196"/>
-      <circ-port height="8" pin="430,450" width="8" x="46" y="396"/>
       <circ-port height="8" pin="430,470" width="8" x="46" y="416"/>
-      <circ-port height="8" pin="430,490" width="8" x="46" y="436"/>
       <circ-port height="8" pin="430,510" width="8" x="46" y="456"/>
-      <circ-port height="8" pin="430,550" width="8" x="46" y="216"/>
       <circ-port height="8" pin="430,570" width="8" x="46" y="236"/>
-      <circ-port height="8" pin="430,590" width="8" x="46" y="256"/>
       <circ-port height="8" pin="430,610" width="8" x="46" y="276"/>
-      <circ-port height="8" pin="430,650" width="8" x="46" y="476"/>
       <circ-port height="8" pin="430,670" width="8" x="46" y="496"/>
-      <circ-port height="8" pin="430,690" width="8" x="46" y="516"/>
       <circ-port height="8" pin="430,710" width="8" x="46" y="536"/>
-      <circ-port height="8" pin="650,160" width="8" x="266" y="66"/>
       <rect fill="none" height="520" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
       <rect height="20" stroke="none" width="200" x="60" y="550"/>
       <rect height="3" stroke="none" width="10" x="260" y="199"/>
@@ -652,229 +542,262 @@ end TCL_Generic;
       <rect height="3" stroke="none" width="10" x="50" y="59"/>
       <rect height="3" stroke="none" width="10" x="50" y="79"/>
       <rect height="3" stroke="none" width="10" x="50" y="99"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="204">C0</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="224">C1</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="244">C2</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="264">C3</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="284">C4</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="304">C5</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="324">C6</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="344">C7</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="364">C8</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="384">C9</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="404">C10</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="424">C11</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="514">COUT</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="232" y="73">CIN</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="104">A2</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="124">A3</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="144">A4</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="164">A5</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="184">A6</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="204">A7</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="224">A8</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="244">A9</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="264">A10</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="284">A11</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="324">B0</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="344">B1</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="364">B2</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="384">B3</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="404">B4</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="424">B5</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="444">B6</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="464">B7</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="484">B8</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="504">B9</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="524">B10</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="544">B11</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">A0</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">A1</text>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="564">Somador12Bits</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="204">C0</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="224">C1</text>
+      <circ-port height="8" pin="650,160" width="8" x="266" y="66"/>
+      <circ-port height="8" pin="430,690" width="8" x="46" y="516"/>
+      <circ-port height="8" pin="430,650" width="8" x="46" y="476"/>
+      <circ-port height="8" pin="430,590" width="8" x="46" y="256"/>
+      <circ-port height="8" pin="430,550" width="8" x="46" y="216"/>
+      <circ-port height="8" pin="430,490" width="8" x="46" y="436"/>
+      <circ-port height="8" pin="430,450" width="8" x="46" y="396"/>
+      <circ-port height="8" pin="430,390" width="8" x="46" y="176"/>
+      <circ-port height="8" pin="430,350" width="8" x="46" y="136"/>
+      <circ-port height="8" pin="430,290" width="8" x="46" y="356"/>
+      <circ-port height="8" pin="430,250" width="8" x="46" y="316"/>
+      <circ-port height="8" pin="430,190" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="430,150" width="8" x="46" y="56"/>
+      <circ-port height="10" pin="650,660" width="10" x="265" y="415"/>
+      <circ-port height="10" pin="650,620" width="10" x="265" y="375"/>
+      <circ-port height="10" pin="650,460" width="10" x="265" y="335"/>
+      <circ-port height="10" pin="650,420" width="10" x="265" y="295"/>
+      <circ-port height="10" pin="650,260" width="10" x="265" y="255"/>
+      <circ-port height="10" pin="650,220" width="10" x="265" y="215"/>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="244">C2</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="264">C3</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="284">C4</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="304">C5</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="324">C6</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="344">C7</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="364">C8</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="384">C9</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="404">C10</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="424">C11</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="514">COUT</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="232" y="73">CIN</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="104">A2</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="124">A3</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="144">A4</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="164">A5</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="184">A6</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="204">A7</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="224">A8</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="244">A9</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="264">A10</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="284">A11</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="324">B0</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="344">B1</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="364">B2</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="384">B3</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="404">B4</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="424">B5</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="444">B6</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="464">B7</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="484">B8</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="504">B9</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="524">B10</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="544">B11</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">A0</text>
+      <text fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">A1</text>
+      <text fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="564">Somador12Bits</text>
+      <circ-anchor facing="east" height="6" width="6" x="267" y="197"/>
     </appear>
-    <comp lib="0" loc="(430,150)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A0"/>
-    </comp>
-    <comp lib="0" loc="(430,170)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(430,190)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A2"/>
-    </comp>
-    <comp lib="0" loc="(430,210)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A3"/>
-    </comp>
-    <comp lib="0" loc="(430,250)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B0"/>
-    </comp>
-    <comp lib="0" loc="(430,270)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B1"/>
-    </comp>
-    <comp lib="0" loc="(430,290)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B2"/>
-    </comp>
-    <comp lib="0" loc="(430,310)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B3"/>
-    </comp>
-    <comp lib="0" loc="(430,350)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A4"/>
-    </comp>
+    <wire from="(650,510)" to="(650,560)"/>
+    <wire from="(650,310)" to="(650,360)"/>
     <comp lib="0" loc="(430,370)" name="Pin">
-      <a name="appearance" val="NewPins"/>
+      <a name="tristate" val="false"/>
       <a name="label" val="A5"/>
     </comp>
-    <comp lib="0" loc="(430,390)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A6"/>
+    <comp lib="0" loc="(650,660)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C11"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(650,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C3"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,570)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A9"/>
+    </comp>
+    <comp lib="0" loc="(430,470)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B5"/>
+    </comp>
+    <comp lib="0" loc="(430,590)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A10"/>
+    </comp>
+    <comp lib="0" loc="(650,420)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C5"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(430,410)" name="Pin">
-      <a name="appearance" val="NewPins"/>
+      <a name="tristate" val="false"/>
       <a name="label" val="A7"/>
     </comp>
     <comp lib="0" loc="(430,450)" name="Pin">
-      <a name="appearance" val="NewPins"/>
+      <a name="tristate" val="false"/>
       <a name="label" val="B4"/>
     </comp>
-    <comp lib="0" loc="(430,470)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B5"/>
-    </comp>
-    <comp lib="0" loc="(430,490)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B6"/>
-    </comp>
-    <comp lib="0" loc="(430,510)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B7"/>
-    </comp>
-    <comp lib="0" loc="(430,550)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A8"/>
-    </comp>
-    <comp lib="0" loc="(430,570)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A9"/>
-    </comp>
-    <comp lib="0" loc="(430,590)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A10"/>
-    </comp>
-    <comp lib="0" loc="(430,610)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="A11"/>
-    </comp>
-    <comp lib="0" loc="(430,650)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B8"/>
-    </comp>
-    <comp lib="0" loc="(430,670)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B9"/>
-    </comp>
-    <comp lib="0" loc="(430,690)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B10"/>
-    </comp>
-    <comp lib="0" loc="(430,710)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="B11"/>
-    </comp>
-    <comp lib="0" loc="(650,160)" name="Pin">
-      <a name="appearance" val="NewPins"/>
+    <comp lib="0" loc="(650,640)" name="Pin">
       <a name="facing" val="west"/>
-      <a name="label" val="CIN"/>
-    </comp>
-    <comp lib="0" loc="(650,200)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C0"/>
       <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(650,220)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C1"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(650,240)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C2"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(650,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C3"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(650,400)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C4"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(650,420)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C5"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(650,440)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C6"/>
-      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C10"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(650,460)" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="C7"/>
       <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C7"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,290)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B2"/>
+    </comp>
+    <comp lib="0" loc="(430,490)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B6"/>
+    </comp>
+    <comp lib="0" loc="(430,390)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A6"/>
+    </comp>
+    <comp lib="0" loc="(430,190)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A2"/>
+    </comp>
+    <comp lib="0" loc="(430,310)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B3"/>
+    </comp>
+    <comp lib="0" loc="(650,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C0"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,510)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B7"/>
     </comp>
     <comp lib="0" loc="(650,600)" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
       <a name="label" val="C8"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(650,620)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C9"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(650,640)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C10"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(650,660)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="C11"/>
-      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(650,710)" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="COUT"/>
       <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="COUT"/>
+      <a name="labelloc" val="east"/>
     </comp>
-    <comp loc="(650,200)" name="Somador4Bits"/>
+    <comp lib="0" loc="(430,610)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A11"/>
+    </comp>
+    <comp lib="0" loc="(430,670)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B9"/>
+    </comp>
+    <comp lib="0" loc="(430,250)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B0"/>
+    </comp>
+    <comp lib="0" loc="(430,270)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B1"/>
+    </comp>
+    <comp lib="0" loc="(650,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="C1"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,710)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B11"/>
+    </comp>
     <comp loc="(650,400)" name="Somador4Bits"/>
     <comp loc="(650,600)" name="Somador4Bits"/>
-    <wire from="(650,310)" to="(650,360)"/>
-    <wire from="(650,510)" to="(650,560)"/>
+    <comp lib="0" loc="(430,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp lib="0" loc="(650,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C2"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(650,620)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C9"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,350)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A4"/>
+    </comp>
+    <comp lib="0" loc="(430,690)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B10"/>
+    </comp>
+    <comp lib="0" loc="(650,440)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C6"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,210)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A3"/>
+    </comp>
+    <comp lib="0" loc="(650,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="CIN"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,550)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A8"/>
+    </comp>
+    <comp lib="0" loc="(430,650)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B8"/>
+    </comp>
+    <comp loc="(650,200)" name="Somador4Bits"/>
+    <comp lib="0" loc="(430,150)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A0"/>
+    </comp>
+    <comp lib="0" loc="(650,400)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C4"/>
+      <a name="labelloc" val="east"/>
+    </comp>
   </circuit>
 </project>

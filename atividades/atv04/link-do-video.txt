@@ -1,0 +1,5 @@
+
+https://youtu.be/nkBLjI4Ge0k
+
+Link para o logsim-evolution se não for possível abrir o circuito no logisim "normal"
+https://github.com/reds-heig/logisim-evolution/releases/tag/v3.4.2
